@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .titulo {
+            font-weight: bold;
+            color: #0067A7;
+            text-decoration: underline;
+        }
+        .negrito {
+            font-weight: bold;
+        }
+        p {
+            font-size: auto;
+            line-height: 24px;
+        }
+        h2, h3 {
+            color: #357DFF;
+        }
+        main {
+            background-image: url(img2.jpg);
+            padding: 20px;
+        }
+        section {
+            border: 2px solid #887890;
+            padding: 15px;
+            border-radius: 15px;
+            background: #D8D8D8;
+            margin-right: 20px;
+            min-width: 30px; /* Largura mínima para cada seção */
+            width: 300px;
+            flex: 0 0 auto; /* Impede que as seções se estiquem */
+        }
+        input {
+            border: 2px solid #E1E62E;
+            margin-bottom: 20px;
+            padding: 5px;
+            background-color: #3E3F1A;
+            color: hotpink;
+            width: 7.6cm;
+            border-radius: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #fff;
+            margin-left: 4.35cm;
+            margin-top: 10px;
+            background: #137F5D;
+            border-radius: 5px;
+        }
+        button:hover {
+            transform: scale(.90);
+            transition: all .2s ease;
+        }
+        #escala {
+            background: #000D9B;
+            color: white;
+            height: 35px;
+            width: 4.3cm;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 2px solid #080C45;
+        }
+        #velocidade {
+            background: #000D9B;
+            color: white;
+            height: 22px;
+            width: 4cm;
+            margin: 5px;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 2px solid #E1E62E;
+        }
+        textarea {
+            width: 7.4cm;
+            padding: 10px;
+        }
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 20px; /* Adiciona espaço para a barra de rolagem */
+        }
+        .scroll-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #CA44C4;
+            border-radius: 5px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #FFFFFF;
+            border-radius: 10px;
+          	border: 1px solid #CA44C4;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">PÁGINA INICIAL</a></li>
+                <li><a href="servicos.html">SERVIÇOS</a></li>
+                <li><a href="ajuda.html">AJUDA</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <p style="text-align: center; font-size: 18px; text-decoration: underline; color: #0067A7; font-weight: bold;">SERVIÇOS MUSICAIS AUTOMÁTICOS</p><br>
+        
+        <div class="scroll-container">
+            <section>
+                <h2 style="text-align: center; font-size: 18px; text-decoration: underline; font-weight: bold;">1. Solicitar Arranjo vago</h2>
+                <p>O <span class="negrito">Arranjo vago</span>, quando é solicitado significa que não será feita nenhuma alteração no arquivo do requerente e o resultado é reenviado em <span class="negrito">pautas musicais(PDF)</span> e em<span class="negrito"> áudio</span> por via WhatsApp.</p>
+                <br>
+                
+                <select id="escala">
+                    <option value="dó=Maior">dó=Maior</option>
+                    <option value="ré=Maior">ré=Maior</option>
+                    <option value="mi=Maior">mi=Maior</option>
+                    <option value="fá=Maior">fá=Maior</option>
+                    <option value="sol=Maior">sol=Maior</option>
+                    <option value="lá=Maior">lá=Maior</option>
+                    <option value="si=Maior">si=Maior</option>
+                    <option value="dó=menor">dó=menor</option>
+                    <option value="ré=menor">ré=menor</option>
+                    <option value="mi=menor">mi=menor</option>
+                    <option value="fá=menor">fá=menor</option>
+                    <option value="sol=menor">sol=menor</option>
+                    <option value="lá=menor">lá=menor</option>
+                    <option value="si=menor">si=menor</option>
+                </select>
+                
+                <input type="number" id="velocidade" min="30" max="200" placeholder="Velocidade (30-200)">
+                <textarea id="recomendacoes" placeholder="Recomendações"></textarea><br>
+                <button onclick="enviarWhatsApp()">Enviar Solicitação</button>
+            </section>
+            
+            <section>
+                <h2 style="text-align: center; font-size: 18px; text-decoration: underline; font-weight: bold;">2. Solicitar Transposição</h2>
+                <p><span class="negrito">Transposição</span>, este tipo significa que será feita qualquer alteração no arquivo do requerente dependendo das recomendações que serão enviadas para serem aplicadas e o resultado é reenviado em <span class="negrito">pautas musicais(PDF)</span> e em<span class="negrito"> áudio</span> por via WhatsApp.</p>
+                
+              
+                <select id="escala">
+                    <option value="dó=Maior">dó=Maior</option>
+                    <option value="ré=Maior">ré=Maior</option>
+                    <option value="mi=Maior">mi=Maior</option>
+                    <option value="fá=Maior">fá=Maior</option>
+                    <option value="sol=Maior">sol=Maior</option>
+                    <option value="lá=Maior">lá=Maior</option>
+                    <option value="si=Maior">si=Maior</option>
+                  style=""  <option value="dó=menor">dó=menor</option>
+                    <option value="ré=menor">ré=menor</option>
+                    <option value="mi=menor">mi=menor</option>
+                    <option value="fá=menor">fá=menor</option>
+                    <option value="sol=menor">sol=menor</option>
+                    <option value="lá=menor">lá=menor</option>
+                    <option value="si=menor">si=menor</option>
+                </select>
+                <input type="number" id="velocidade" min="30" max="200" placeholder="Velocidade (30-200)"><br>
+                
+                <textarea id="recomendacoes" placeholder="Recomendações"></textarea><br>
+                
+                <button onclick="enviarWhatsApp()">Enviar Solicitação</button>
+            </section>
+            
+            <section>
+                <h3 style="text-align: center; font-size: 18px; text-decoration: underline; font-weight: bold;">3. Solicitar Avaliação de Partituras</h3>
+                <p><span class="negrito">Avaliação de Partituras</span>, quando é solicitada significa que o requerente deve enviar <span class="negrito">um</span> ou <span class="negrito">mais partituras</span> para serem analisadas e avaliadas de acordo com o padrão e a lógica atualizada relativamente à harmonia musical e também ao aperfeiçoamento de acordes utilizadas. O resultado é reenviado em <span class="negrito">pautas musicais(PDF)</span> e em<span class="negrito"> áudio</span> por via WhatsApp.</p>
+
+               <textarea id="recomendacoes" placeholder="Recomendações"></textarea><br>
+                <button onclick="enviarWhatsApp()">Enviar Solicitação</button>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Serviços Musicais</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
